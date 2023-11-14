@@ -98,7 +98,7 @@ class LRP:
                         pooling_type = 'avg'
                     Rs.append(self.backprop_pool(self.activations[i + 1], Rs[-1], self.pool_ksize, self.pool_strides, pooling_type))
                 else:
-                    raise Error('Unknown operation.')
+                    raise ValueError('Unknown operation.')
 
             return Rs[-1]
 
